@@ -1,0 +1,53 @@
+/*VARIAVEIS*/
+:root{
+    --color-bg-principal: brown; /*ESCOLHER COR PRINCIPAL*/
+    --color-bg-buttons: #000ac5; /*ESCOLHER COR BOTOES*/
+    --color-bg-buttons-hover: #000a8b; /*ESCOLHER COR BOTOES*/
+}
+
+.flex {
+    display: flex;
+}
+
+/* Flex Container */
+.container {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Flex Item */
+.item {
+    flex: 1;
+    margin: 5rem;
+    height: 5rem;
+    background: var(--color-bg-buttons);
+    font-size: 1.5em;
+    border: 5px solid #ccc;
+    border-radius: 30px 1px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: height 1s;
+}
+
+.item:hover {
+    background: var(--color-bg-buttons-hover);
+    border: 5px solid #ccc;
+    color: white;
+}
+
+.btn-selected{
+    background: var(--color-bg-buttons);
+    color: white;
+    height: 50rem;
+}
+
+body {
+    font-family: monospace;
+    color: #333;
+    /*background-image: url("/img/textura.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: inherit;*/
+}
