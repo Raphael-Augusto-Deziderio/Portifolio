@@ -13,14 +13,14 @@ class CreatePeopleTechnologiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('People_Technology', function (Blueprint $table) {
+        Schema::create('PeopleTechnology', function (Blueprint $table) {
             $table->increments('idPeopleTech');
 
             $table->unsignedInteger('idPeople');
             $table->foreign('idPeople')->references('idPeople')->on('People');
 
-            $table->unsignedInteger('idTech');
-            $table->foreign('idTech')->references('idTech')->on('Technologies');
+            $table->unsignedInteger('idTechnology');
+            $table->foreign('idTechnology')->references('idTechnology')->on('Technology');
 
             $table->string('timeExperience', 3);
             $table->string('Competency', 20);
@@ -37,6 +37,6 @@ class CreatePeopleTechnologiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('people_technologies');
+        Schema::dropIfExists('PeopleTechnology');
     }
 }

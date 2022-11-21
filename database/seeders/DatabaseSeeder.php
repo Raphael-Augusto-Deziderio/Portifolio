@@ -11,8 +11,10 @@ use App\Models\PeopleTechnology;
 use App\Models\Project;
 use App\Models\Skill;
 use App\Models\Technology;
+use App\Models\TechProject;
 use App\Models\TypeProject;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -31,10 +33,12 @@ class DatabaseSeeder extends Seeder
 
         $skill = [
             ['nameSkill' => 'Desire to learn', 'descSkill' => 'Desire to learn'],
-            ['nameSkill' => 'hardworking', 'descSkill' => 'hardworking']
+            ['nameSkill' => 'hardworking', 'descSkill' => 'hardworking'],
         ];
 
-        Skill::create($skill);
+
+        DB::table('Skill')->insert($skill);
+
 
 
         $tech = [
@@ -51,74 +55,86 @@ class DatabaseSeeder extends Seeder
             ['nameTech' => 'NodeJs', 'descTech' => 'NodeJs for Server Games'],
             ['nameTech' => 'WebSockets', 'descTech' => 'WebSockets for Server Games'],
             ['nameTech' => 'Photon Network', 'descTech' => 'Photon Network for Server Games'],
-            ['nameTech' => 'Vue.Js', 'descTech' => 'Framework for Javascript']
+            ['nameTech' => 'Vue.Js', 'descTech' => 'Framework for Javascript'],
+            ['nameTech' => 'Wordpress', 'descTech' => 'Wordpress']
         ];
 
-        Technology::create($tech);
+        DB::table('Technology')->insert($tech);
+
 
         $peopleTech = [
-            ['idPeople' => '1', 'idTech' => '1', 'timeExperience' => '', 'Competency' => ''],
-            ['idPeople' => '1', 'idTech' => '2', 'timeExperience' => '', 'Competency' => ''],
-            ['idPeople' => '1', 'idTech' => '3', 'timeExperience' => '', 'Competency' => ''],
-            ['idPeople' => '1', 'idTech' => '4', 'timeExperience' => '', 'Competency' => ''],
-            ['idPeople' => '1', 'idTech' => '5', 'timeExperience' => '', 'Competency' => ''],
-            ['idPeople' => '1', 'idTech' => '6', 'timeExperience' => '', 'Competency' => ''],
-            ['idPeople' => '1', 'idTech' => '7', 'timeExperience' => '', 'Competency' => ''],
-            ['idPeople' => '1', 'idTech' => '8', 'timeExperience' => '', 'Competency' => ''],
-            ['idPeople' => '1', 'idTech' => '9', 'timeExperience' => '', 'Competency' => ''],
-            ['idPeople' => '1', 'idTech' => '10', 'timeExperience' => '', 'Competency' => ''],
-            ['idPeople' => '1', 'idTech' => '11', 'timeExperience' => '', 'Competency' => ''],
-            ['idPeople' => '1', 'idTech' => '12', 'timeExperience' => '', 'Competency' => ''],
-            ['idPeople' => '1', 'idTech' => '13', 'timeExperience' => '', 'Competency' => ''],
-            ['idPeople' => '1', 'idTech' => '14', 'timeExperience' => '', 'Competency' => ''],
+            ['idPeople' => '1', 'idTechnology' => '1', 'timeExperience' => '', 'Competency' => ''],
+            ['idPeople' => '1', 'idTechnology' => '2', 'timeExperience' => '', 'Competency' => ''],
+            ['idPeople' => '1', 'idTechnology' => '3', 'timeExperience' => '', 'Competency' => ''],
+            ['idPeople' => '1', 'idTechnology' => '4', 'timeExperience' => '', 'Competency' => ''],
+            ['idPeople' => '1', 'idTechnology' => '5', 'timeExperience' => '', 'Competency' => ''],
+            ['idPeople' => '1', 'idTechnology' => '6', 'timeExperience' => '', 'Competency' => ''],
+            ['idPeople' => '1', 'idTechnology' => '7', 'timeExperience' => '', 'Competency' => ''],
+            ['idPeople' => '1', 'idTechnology' => '8', 'timeExperience' => '', 'Competency' => ''],
+            ['idPeople' => '1', 'idTechnology' => '9', 'timeExperience' => '', 'Competency' => ''],
+            ['idPeople' => '1', 'idTechnology' => '10', 'timeExperience' => '', 'Competency' => ''],
+            ['idPeople' => '1', 'idTechnology' => '11', 'timeExperience' => '', 'Competency' => ''],
+            ['idPeople' => '1', 'idTechnology' => '12', 'timeExperience' => '', 'Competency' => ''],
+            ['idPeople' => '1', 'idTechnology' => '13', 'timeExperience' => '', 'Competency' => ''],
+            ['idPeople' => '1', 'idTechnology' => '14', 'timeExperience' => '', 'Competency' => ''],
+            ['idPeople' => '1', 'idTechnology' => '14', 'timeExperience' => '', 'Competency' => ''],
         ];
 
-        PeopleTechnology::create($peopleTech);
-
+        DB::table('PeopleTechnology')->insert($peopleTech);
 
 
         Address::create([
             'nameCity' => 'Uberaba',
             'nameState' => 'Minas Gerais',
             'nameCountry' => 'Brasil'
-
         ]);
 
-        $project = [
-            ['nameProject' => '', 'descProject' => '', 'urlProject' => '', 'pathImgProject' => ''],
-            ['nameProject' => '', 'descProject' => '', 'urlProject' => '', 'pathImgProject' => ''],
-            ['nameProject' => '', 'descProject' => '', 'urlProject' => '', 'pathImgProject' => ''],
-
+        $typeProject = [
+            ['nameTypeProject' => 'Mobile Games', 'descTypeProject' => 'Mobile'],
+            ['nameTypeProject' => 'Desktop/Web Games', 'descTypeProject' => 'Desktop'],
+            ['nameTypeProject' => 'Sites', 'descTypeProject' => 'Web'],
+            ['nameTypeProject' => 'App', 'descTypeProject' => 'App Mobile'],
+            ['nameTypeProject' => 'Study', 'descTypeProject' => 'Study'],
         ];
 
-        Project::create($project);
+        DB::table('TypeProject')->insert($typeProject);
 
-        $typeProject = [
-                ['nameTypeProject' => 'Mobile Games', 'descTypeProject' => 'Mobile'],
-                ['nameTypeProject' => 'Desktop/Web Games', 'descTypeProject' => 'Desktop'],
-                ['nameTypeProject' => 'Sites', 'descTypeProject' => 'Web']
-            ];
 
-        TypeProject::create($typeProject);
+        $project = [
+            ['nameProject' => 'EducaKids', 'descProject' => 'Education Mobile Game', 'urlProject' => 'https://play.unity.com/mg/other/educakids', 'pathImgProject' => '', 'idTypeProject' => '1'],
+            ['nameProject' => 'Wander Cell', 'descProject' => 'GameJam+ 2019 finalist game', 'urlProject' => 'https://gamejolt.com/games/wandercell/430889', 'pathImgProject' => '', 'idTypeProject' => '2'],
+            ['nameProject' => 'MCF Agropecuária', 'descProject' => 'Institutional website for the company MCF Agropecuária', 'urlProject' => 'https://www.mcfagropecuaria.com.br/', 'pathImgProject' => '', 'idTypeProject' => '3'],
+            ['nameProject' => 'Império Leilões', 'descProject' => 'Institutional website for the company Império Leilões', 'urlProject' => 'https://imperioleiloesuberaba.com.br/', 'pathImgProject' => '', 'idTypeProject' => '3'],
+            ['nameProject' => 'Laramusic', 'descProject' => 'Project for study', 'urlProject' => '', 'pathImgProject' => '', 'idTypeProject' => '5'],
+        ];
 
+
+        DB::table('Project')->insert($project);
+
+
+        /*$techProject = [];
+        TechProject::create($techProject);
 
 
         PeopleSkill::create([
             'idPeople' => '',
             'idSkill' => ''
+        ]); */
 
-        ]);
+        $peopleProject = [
+            ['idPeople' => '1', 'idProject' => '1'],
+            ['idPeople' => '1', 'idProject' => '2'],
+            ['idPeople' => '1', 'idProject' => '3'],
+            ['idPeople' => '1', 'idProject' => '4'],
+            ['idPeople' => '1', 'idProject' => '5'],
+        ];
 
-        PeopleProject::create([
-            'idPeople' => '',
-            'idProject' => ''
+        DB::table('PeopleProject')->insert($peopleProject);
 
-        ]);
 
         PeopleAddress::create([
-            'idPeople' => '',
-            'idAddress' => ''
-
+            'idPeople' => '1',
+            'idAddress' => '1'
         ]);
     }
 }

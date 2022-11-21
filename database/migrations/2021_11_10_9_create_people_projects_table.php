@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePeopleSkillsTable extends Migration
+class CreatePeopleProjectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,14 @@ class CreatePeopleSkillsTable extends Migration
      */
     public function up()
     {
-        Schema::create('People_Skill', function (Blueprint $table) {
-            $table->increments('idPeopleSkill');
+        Schema::create('PeopleProject', function (Blueprint $table) {
+            $table->increments('idPeopleProject');
 
             $table->unsignedInteger('idPeople');
             $table->foreign('idPeople')->references('idPeople')->on('People');
 
-            $table->unsignedInteger('idSkill');
-            $table->foreign('idSkill')->references('idSkill')->on('Skill');
+            $table->unsignedInteger('idProject');
+            $table->foreign('idProject')->references('idProject')->on('Project');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -33,6 +33,6 @@ class CreatePeopleSkillsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('people_skills');
+        Schema::dropIfExists('PeopleProject');
     }
 }

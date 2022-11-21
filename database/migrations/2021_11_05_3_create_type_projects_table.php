@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTechnologiesTable extends Migration
+class CreateTypeProjectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateTechnologiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('Technology', function (Blueprint $table) {
-            $table->increments('idTech');
-            $table->string('nameTech', 20);
-            $table->string('descTech', 100);
+        Schema::create('TypeProject', function (Blueprint $table) {
+            $table->increments('idTypeProject');
+            $table->string('nameTypeProject');
+            $table->string('descTypeProject');
             $table->timestamps();
             $table->softDeletes();
         });
@@ -29,6 +29,6 @@ class CreateTechnologiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('technologies');
+        Schema::dropIfExists('TypeProject');
     }
 }

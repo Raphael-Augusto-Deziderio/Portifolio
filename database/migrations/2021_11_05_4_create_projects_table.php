@@ -19,6 +19,10 @@ class CreateProjectsTable extends Migration
             $table->string('descProject', 100);
             $table->string('urlProject', 200);
             $table->string('pathImgProject', 100);
+
+            $table->unsignedInteger('idTypeProject');
+            $table->foreign('idTypeProject')->references('idTypeProject')->on('TypeProject');
+
             $table->timestamps();
             $table->softDeletes();
         });
@@ -31,6 +35,6 @@ class CreateProjectsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('projects');
+        Schema::dropIfExists('Project');
     }
 }

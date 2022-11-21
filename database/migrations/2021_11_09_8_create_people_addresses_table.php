@@ -13,7 +13,7 @@ class CreatePeopleAddressesTable extends Migration
      */
     public function up()
     {
-        Schema::create('People_Addresses', function (Blueprint $table) {
+        Schema::create('PeopleAddress', function (Blueprint $table) {
             $table->increments('idPeopleAddress');
 
             $table->unsignedInteger('idPeople');
@@ -34,6 +34,6 @@ class CreatePeopleAddressesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('people_addresses');
+        Schema::dropIfExists('PeopleAddress');
     }
 }
