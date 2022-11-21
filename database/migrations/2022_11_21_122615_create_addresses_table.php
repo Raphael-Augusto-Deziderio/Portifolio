@@ -19,6 +19,7 @@ class CreateAddressesTable extends Migration
             $table->string('nameState');
             $table->string('nameCountry');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

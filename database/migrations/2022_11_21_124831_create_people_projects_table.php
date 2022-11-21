@@ -22,6 +22,7 @@ class CreatePeopleProjectsTable extends Migration
             $table->unsignedInteger('idProject');
             $table->foreign('idProject')->references('idProject')->on('Project');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

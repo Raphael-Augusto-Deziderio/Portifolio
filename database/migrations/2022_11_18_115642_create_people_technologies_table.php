@@ -21,6 +21,10 @@ class CreatePeopleTechnologiesTable extends Migration
 
             $table->unsignedInteger('idTech');
             $table->foreign('idTech')->references('idTech')->on('Technologies');
+
+            $table->string('timeExperience', 3);
+            $table->string('Competency', 20);
+
             $table->timestamps();
             $table->softDeletes();
         });

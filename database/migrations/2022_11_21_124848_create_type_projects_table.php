@@ -18,6 +18,7 @@ class CreateTypeProjectsTable extends Migration
             $table->string('nameTypeProject');
             $table->string('descTypeProject');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

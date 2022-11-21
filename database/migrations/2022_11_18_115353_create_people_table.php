@@ -17,6 +17,7 @@ class CreatePeopleTable extends Migration
             $table->increments('idPeople');
             $table->string('namePeople', 100);
             $table->string('agePeople', 3);
+            $table->string('descPeople', 100);
             $table->timestamps();
             $table->softDeletes();
         });

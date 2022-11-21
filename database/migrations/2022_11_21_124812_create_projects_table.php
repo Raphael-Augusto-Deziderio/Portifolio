@@ -20,6 +20,7 @@ class CreateProjectsTable extends Migration
             $table->string('urlProject', 200);
             $table->string('pathImgProject', 100);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

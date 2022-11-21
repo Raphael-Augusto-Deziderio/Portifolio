@@ -23,6 +23,7 @@ class CreatePeopleAddressesTable extends Migration
             $table->foreign('idAddress')->references('idAddress')->on('Address');
 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
