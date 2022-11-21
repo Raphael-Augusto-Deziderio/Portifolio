@@ -23,19 +23,16 @@ window.onload = function () {
 
     function fillCard(id) {
         let divContent = document.createElement("div");
-
+        divContent.setAttribute("id", 'dynamicDiv');
         if(id == "btnGames" && close == false){
             console.log(divContent);
             buttonGames.appendChild(divContent);
             divContent.innerHTML =
                 `<p>Games</p>`;
-            close = true;
         } else if(id == "btnGames" && close == true){
             console.log(close);
-            let newButtonGames = document.getElementById("btnGames");
-            console.log(newButtonGames.removeChild());
-            newButtonGames.children;
-            close = false;
+            let divContent = document.getElementById("dynamicDiv");
+            divContent.remove();
             console.log(close);
         }
 
