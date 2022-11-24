@@ -90,10 +90,9 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $typeProject = [
-            ['nameTypeProject' => 'Mobile Games', 'descTypeProject' => 'Mobile'],
-            ['nameTypeProject' => 'Desktop/Web Games', 'descTypeProject' => 'Desktop'],
-            ['nameTypeProject' => 'Sites', 'descTypeProject' => 'Web'],
-            ['nameTypeProject' => 'App', 'descTypeProject' => 'App Mobile'],
+            ['nameTypeProject' => 'Games', 'descTypeProject' => 'Games'],
+            ['nameTypeProject' => 'Sites', 'descTypeProject' => 'Sites'],
+            ['nameTypeProject' => 'App', 'descTypeProject' => 'App'],
             ['nameTypeProject' => 'Study', 'descTypeProject' => 'Study'],
         ];
 
@@ -102,10 +101,10 @@ class DatabaseSeeder extends Seeder
 
         $project = [
             ['nameProject' => 'EducaKids', 'descProject' => 'Education Mobile Game', 'urlProject' => 'https://play.unity.com/mg/other/educakids', 'pathImgProject' => '', 'idTypeProject' => '1'],
-            ['nameProject' => 'Wander Cell', 'descProject' => 'GameJam+ 2019 finalist game', 'urlProject' => 'https://gamejolt.com/games/wandercell/430889', 'pathImgProject' => '', 'idTypeProject' => '2'],
-            ['nameProject' => 'MCF Agropecuária', 'descProject' => 'Institutional website for the company MCF Agropecuária', 'urlProject' => 'https://www.mcfagropecuaria.com.br/', 'pathImgProject' => '', 'idTypeProject' => '3'],
-            ['nameProject' => 'Império Leilões', 'descProject' => 'Institutional website for the company Império Leilões', 'urlProject' => 'https://imperioleiloesuberaba.com.br/', 'pathImgProject' => '', 'idTypeProject' => '3'],
-            ['nameProject' => 'Laramusic', 'descProject' => 'Project for study', 'urlProject' => '', 'pathImgProject' => '', 'idTypeProject' => '5'],
+            ['nameProject' => 'Wander Cell', 'descProject' => 'GameJam+ 2019 finalist game', 'urlProject' => 'https://gamejolt.com/games/wandercell/430889', 'pathImgProject' => '', 'idTypeProject' => '1'],
+            ['nameProject' => 'MCF Agropecuária', 'descProject' => 'Institutional website for the company MCF Agropecuária', 'urlProject' => 'https://www.mcfagropecuaria.com.br/', 'pathImgProject' => '', 'idTypeProject' => '2'],
+            ['nameProject' => 'Império Leilões', 'descProject' => 'Institutional website for the company Império Leilões', 'urlProject' => 'https://imperioleiloesuberaba.com.br/', 'pathImgProject' => '', 'idTypeProject' => '2'],
+            ['nameProject' => 'Laramusic', 'descProject' => 'Project for study', 'urlProject' => '', 'pathImgProject' => '', 'idTypeProject' => '4'],
         ];
 
 

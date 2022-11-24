@@ -8,20 +8,42 @@
     <link rel="stylesheet" type="text/css" href="{{url('css/home.css')}}" media="screen" />
 </head>
 <body>
+
     @include('template/header')
     <section class="container flex">
             <button type="button" id="btnGames" class="item">
-                <p>Games</p>
+                <h2>Games</h2>
+                @if(isset($allProjects))
+                    @foreach($allProjects as $project)
+                        @if($project->idTypeProject == 1)
+                            <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal" data-id ={{$project->idProject}}>
+                                <p>{{$project->nameProject}}</p>
+                            </a>
+                        @endif
+                    @endforeach
+                @endif
             </button>
 
             <button type="button" id="btnWeb" class="item">
-                <p>Web</p>
+                <h2>Web</h2>
+                @if(isset($allProjects))
+                    @foreach($allProjects as $project)
+                        @if($project->idTypeProject == 2)
+                            <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal" data-id ={{$project->idProject}}>
+                                {{$project->nameProject}}
+                            </a>
+                        @endif
+           @endforeach
+                @endif
             </button>
     </section>
 
+{{--ProjectModal--}}
+@include('home.modals.projects')
 
 
-    <script type="text/javascript" src="{{url('js/home.js')}}"></script>
+{{--JS--}}
+@include('home.js')
 
 </body>
 
