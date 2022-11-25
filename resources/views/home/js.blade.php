@@ -34,14 +34,12 @@
         divContent.setAttribute("id", 'dynamicDiv');
 
         if (id == "btnGames" && close == false) {
-            console.log(divContent);
             buttonGames.appendChild(divContent);
             divContent.innerHTML =
                 `<p>Games</p>`;
             close = true;
 
         } else if (id == "btnWeb" && close == false) {
-            console.log(divContent);
             buttonWeb.appendChild(divContent);
 
         }  else if (id == "btnGames" && close == true) {
@@ -51,11 +49,9 @@
         }
 
          else if (id == "btnWeb" && close == true) {
-            console.log(close);
             let divContent = document.getElementById("dynamicDiv");
             divContent.remove();
             close = false;
-            console.log(close);
         }
     }
 

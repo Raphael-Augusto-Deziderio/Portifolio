@@ -17,4 +17,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::resource('/', HomeController::class);
+Route::get('project/modals/{id}', [HomeController::class, 'getProjectById']);
 

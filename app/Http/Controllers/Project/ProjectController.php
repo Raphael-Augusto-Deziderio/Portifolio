@@ -1,18 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Home;
+namespace App\Http\Controllers\Project;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Project;
-class HomeController extends Controller
+
+class ProjectController extends Controller
 {
 
-    protected $projectModel;
 
-    public function __construct(Project $projectModel){
-        $this->projectModel = $projectModel;
-    }
 
 
     /**
@@ -22,8 +18,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $allProjects = $this->getAllProjects();
-        return view('home.index', compact('allProjects'));
+
     }
 
     /**
@@ -93,12 +88,8 @@ class HomeController extends Controller
     }
 
     public function getAllProjects(){
-        $allProjects = $this->projectModel->get();
-        return $allProjects;
+
     }
 
-    public function getProjectById($id){
-        $allProjects = $this->projectModel->find($id);
-        return $allProjects;
-    }
+
 }

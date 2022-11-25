@@ -16,8 +16,8 @@
                 @if(isset($allProjects))
                     @foreach($allProjects as $project)
                         @if($project->idTypeProject == 1)
-                            <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal" data-id ={{$project->idProject}}>
-                                <p>{{$project->nameProject}}</p>
+                            <a type="button" class="linkOpenProjectGames" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal" data-id={{$project->idProject}}>
+                                {{$project->nameProject}}
                             </a>
                         @endif
                     @endforeach
@@ -29,7 +29,7 @@
                 @if(isset($allProjects))
                     @foreach($allProjects as $project)
                         @if($project->idTypeProject == 2)
-                            <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal" data-id ={{$project->idProject}}>
+                            <a type="button" class="linkOpenProjectWeb" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal" data-id={{$project->idProject}}>
                                 {{$project->nameProject}}
                             </a>
                         @endif
@@ -44,6 +44,7 @@
 
 {{--JS--}}
 @include('home.js')
+@include('home.modals.modalJs')
 
 </body>
 
