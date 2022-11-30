@@ -41,7 +41,20 @@
 .btn-selected{
     background: var(--color-bg-buttons);
     color: white;
-    height: 50rem;
+    height: 30rem;
+}
+
+.imgProjectModal, #pathImg{
+    max-width: 20rem;
+    max-height: 20rem;
+}
+
+.contentLinkProjectsGames{
+    opacity: 0;
+}
+
+.contentLinkProjectsWeb{
+    opacity: 0;
 }
 
 body {

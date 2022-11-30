@@ -2,7 +2,7 @@
     window.onload = function () {
 
     //Modal de Projetos
-    // const projectModal = new bootstrap.Modal('#projectModal');
+    const projectModal = new bootstrap.Modal('#projectModal');
 
     //Botao do Projeto
     var linkProject = $('#linkProject');
@@ -14,7 +14,12 @@
     //Botao de Web
     var buttonWeb = document.getElementById("btnWeb");
 
-    var close = false;
+    var divContentLinkProjectsGames = $('.contentLinkProjectsGames');
+    var divContentLinkProjectsWeb = $('.contentLinkProjectsWeb');
+
+
+    var iscloseGames = true;
+    var iscloseWeb = true;
 
     buttonGames.addEventListener("click", function () {
         buttonGames.classList.toggle("btn-selected");
@@ -30,37 +35,23 @@
 
 
     function fillCard(id) {
-        let divContent = document.createElement("div");
-        divContent.setAttribute("id", 'dynamicDiv');
 
-        if (id == "btnGames" && close == false) {
-            buttonGames.appendChild(divContent);
-            divContent.innerHTML =
-                `<p>Games</p>`;
-            close = true;
-
-        } else if (id == "btnWeb" && close == false) {
-            buttonWeb.appendChild(divContent);
-
-        }  else if (id == "btnGames" && close == true) {
-            let divContent = document.getElementById("dynamicDiv");
-            divContent.remove();
-            close = false;
-        }
-
-         else if (id == "btnWeb" && close == true) {
-            let divContent = document.getElementById("dynamicDiv");
-            divContent.remove();
-            close = false;
+        if (id == "btnGames" && iscloseGames == true) {
+            divContentLinkProjectsGames.attr("style", "opacity:1");
+            iscloseGames = false;
+        } else if (id == "btnWeb" && iscloseWeb == true) {
+            divContentLinkProjectsWeb.attr("style", "opacity:1");
+            iscloseWeb = false;
+        }  else if (id == "btnGames" && iscloseGames == false) {
+            divContentLinkProjectsGames.attr("style", "opacity:0");
+            // divContent.remove();
+            iscloseGames = true;
+        } else if (id == "btnWeb" && iscloseWeb == false) {
+            divContentLinkProjectsWeb.attr("style", "opacity:0");
+            // divContent.remove();
+            iscloseWeb = true;
         }
     }
-
-         linkProject.click(function(){
-             console.log(projectModal);
-
-             // projectModal.show();
-         });
-
 };
 
 

@@ -7,24 +7,20 @@
             </div>
             <div class="modal-body">
 
-                <h3>Imagem:</h3>
-                <p >
+                <h3>Imagem</h3>
+                <div class="imgProjectModal container">
                     <figure>
                         <img id="pathImg" src="" alt="Project Image">
                         <figcaption></figcaption>
                     </figure>
-                </p>
+                </div>
 
-                <h3>Descrição:</h3>
+                <h3>Descrição</h3>
                 <p id="descProject"></p>
 
-                <h3>URL:</h3>
+                <h3>URL</h3>
                  <a id="urlProject" href="">URL Project</a>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 </div>
-
